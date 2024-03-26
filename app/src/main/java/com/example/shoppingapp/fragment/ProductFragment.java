@@ -76,6 +76,12 @@ public class ProductFragment extends Fragment implements ProductAdapter.OnClicke
                 navController.navigate(R.id.action_productFragment_to_productDetailFragment);
             }
         });
+        binding.btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+            }
+        });
 
         firestore.collection("Cart"+userId).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override

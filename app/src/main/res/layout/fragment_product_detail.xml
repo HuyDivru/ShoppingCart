@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/detailPro_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -36,7 +36,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/detailPro_des"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -46,7 +46,7 @@
             android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/detailPro_title" />
 
         <LinearLayout
             android:id="@+id/linear"
@@ -56,33 +56,35 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2">
+            app:layout_constraintTop_toBottomOf="@+id/detailPro_des">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_quantity"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="50dp"
                 android:layout_height="40dp"
                 app:backgroundTint="#0F8D9E"
-                app:iconGravity="textStart"
                 app:icon="@drawable/ic_baseline_exposure_plus_1_24"
-                />
+                app:iconGravity="textStart" />
+
             <TextView
+                android:id="@+id/quantity_display"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:text="0"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
+
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sub_quantity"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="50dp"
                 android:layout_height="40dp"
                 app:backgroundTint="#0F8D9E"
-                app:iconGravity="textStart"
                 app:icon="@drawable/ic_baseline_exposure_neg_1_24"
-                />
+                app:iconGravity="textStart" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -102,27 +104,17 @@
 
 
         <TextView
-            android:id="@+id/pricetitle"
+            android:id="@+id/pricetotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="8dp"
-            android:text="Price for 1 item for"
+            android:text="Price for 1 item for 200"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_add_to_cart" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="200"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/pricetitle"
-            app:layout_constraintStart_toEndOf="@+id/pricetitle"
-            app:layout_constraintTop_toTopOf="@+id/pricetitle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

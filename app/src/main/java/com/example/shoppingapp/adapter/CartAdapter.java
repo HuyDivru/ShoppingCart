@@ -25,6 +25,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     private FirebaseAuth auth=FirebaseAuth.getInstance();
     private String userid;
     private String documentid;
+
+    public void setListCart(List<Cart> listCart) {
+        this.listCart = listCart;
+    }
+
     @NonNull
     @Override
     public CartAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

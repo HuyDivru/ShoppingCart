@@ -74,6 +74,10 @@
             android:name="Description"
             app:argType="string"
             android:defaultValue="null" />
+        <argument
+            android:name="Price"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
