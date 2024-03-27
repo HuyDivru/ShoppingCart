@@ -24,7 +24,7 @@ public class ProductViewModel extends ViewModel implements ProductRepo.OnProduct
     @Override
     public void products(List<Product> productList) {
 //        ProductFragmetDirections.ActionProductFragmentToProductDetailFragment action=ProductFragmetDirections.actionProductFragmentToProductDetailFragment();
-
+        mutableLiveData.setValue(productList);
     }
 
 
